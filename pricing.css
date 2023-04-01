@@ -14,20 +14,26 @@ hr{
     opacity: 0.4;
 }
 
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
 .nav{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    gap: 25px;
 }
 .nav a{
-    font-size: 30px;
+    font-size: calc(0.8rem + 2vw);
     text-decoration: none;
     letter-spacing: 0.9px;
-    margin-left: 25px;
     color: rgb(24, 24, 24);
-    padding-top: 15px;
-    padding-bottom: 15px;
     font-family: 'Ananda', sans-serif;
 }
 a:hover{
@@ -38,7 +44,7 @@ a:hover{
 .random-1{
     margin-top: 50px;
     text-align: center;
-    font-size: 3.5vw;
+    font-size: calc(1.2rem + 4vw);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
     word-spacing: 1px;
@@ -47,7 +53,7 @@ a:hover{
 }
 .random-2{
     text-align: center;
-    font-size: 1.5vw;
+    font-size:calc(1.2rem + 1.5vw);
     font-weight: lighter;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 5px;
@@ -56,94 +62,87 @@ a:hover{
     opacity: 0.9;
 }
 
-.price{
-    margin-top: 75px;
+.price-content{
+    margin-top: 4rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 40px;
-    height: 25vw;
 }
-.price-1{
-    background-color: rgba(35, 35, 35, 0.885);
-    padding: 20px;
-    width: 20%;
+
+.price-content .price{
+    border: none;
+    border-radius: 5px;
+    padding: 3rem;
+}
+.price:nth-child(1){
+    background: rgba(35, 35, 35, 0.885);
     color: white;
-    border: none;
-    border-radius: 5px;
 }
-.price-2{
-    background-color: rgba(0, 148, 89, 0.864);
-    padding: 20px;
-    width: 20%;
+.price:nth-child(2){
+    background: rgba(0, 148, 89, 0.864);
     color: white;
-    border: none;
-    border-radius: 5px;
 }
-.price-3{
-    background-color: rgba(255, 204, 0, 0.929);
-    padding: 20px;
-    width: 20%;
-    border: none;
-    border-radius: 5px;
+.price:nth-child(3){
+    background: rgba(255, 204, 0, 0.929);
 }
+
 .price h3{
     font-weight: 100;
-    font-size: 2.5vw;
+    font-size: calc(1.6rem + 1.5vw);
+    margin-bottom: 0.5rem;
 }
 .price h4{
     font-weight: 300;
-    font-size: 2.5vw;
+    font-size: calc(1.2rem + 1.5vw);
 }
 .price p{
     font-weight: 100;
-
     font-size: 1vw;
-    position: relative;
-    left: 25%;
-    bottom: 8%;
+}
+.price ul{
+    margin-top: 1rem;
 }
 .price li{
     font-weight: 100;
-    position: relative;
-    left: 10%;
-    font-size: 1vw;
+    font-size: calc(0.6rem + 1vw);
 }
-
-.p1-btn{
-    height: 2.5vw;
-    width: 100%;
-    position:relative;
-    top: 23%;
-    border: 1px solid white;
+.price h4 span{
+    font-size:  calc(0.6rem + 0.5vw);
+}
+.price button{
+    margin-top: 3rem;
     border-radius: 5px;
-    color: white;
     background-color: transparent;
     cursor: pointer;
-}
-.p2-btn{
-    height: 2.5vw;
+    font-size: calc(.6rem + 1vw);
+    padding: 1rem 0;
     width: 100%;
-    position:relative;
-    bottom: -12%;
+}
+.p1-btn:hover, .p2-btn:hover{
+    background: rgb(43, 84, 249);
+}
+.p3-btn:hover{
+    background: rgb(250, 144, 6);
+}
+.p1-btn, .p2-btn{
     border: 1px solid white;
-    border-radius: 5px;
     color: white;
-    background-color: transparent;
-    cursor: pointer;
 }
 .p3-btn{
-    height: 2.5vw;
-    width: 100%;
-    position:relative;
-    bottom: -12%;
     border: 1px solid rgb(0, 0, 0);
-    border-radius: 5px;
     color: rgb(0, 0, 0);
-    background-color: transparent;
-    cursor: pointer;
 }
+
 .p1-p{
     margin-left: -21px;
+}
+@media screen and (max-width: 350px){
+    .price-content .price{
+        padding: 2rem;
+    }
 }
 
 .action{
@@ -153,12 +152,13 @@ a:hover{
     background-position: fixed;
     background-position-x: center;
     background-position-y: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .action-1{
-    text-align: center;
-    color: rgba(255, 255, 255, 0.852);
-    font-size: clamp(50px, 4vh, 200px);
-    padding: 70px;
+    color: rgb(250, 72, 72);
+    font-size: calc(2.2rem + 1.5vw);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 900;
 }

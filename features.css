@@ -7,22 +7,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .nav{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    gap: 25px;
 }
 .nav a{
-    font-size: 30px;
+    font-size: calc(0.8rem + 2vw);
     text-decoration: none;
     letter-spacing: 0.9px;
-    margin-left: 25px;
     color: rgb(24, 24, 24);
-    padding-top: 15px;
-    padding-bottom: 15px;
     font-family: 'Ananda', sans-serif;
 }
 a:hover{
@@ -33,15 +33,14 @@ a:hover{
 .boost{
     background-color: black;
     opacity: 0.9;
-    height: 20vw;
     display: flex;
     flex-direction: column;
-    padding-top: 2.5vw;
     align-items: center;
 }
+
 .boost h2{
-    margin-top: 10px;
-    font-size: 3.5vw;
+    margin-top: 1rem;
+    font-size: calc(1.2rem + 4vw);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
     font-weight: lighter;
@@ -50,33 +49,38 @@ a:hover{
     font-weight: lighter;
     margin-top: 10px;
     margin-bottom: 5px;
-    font-size: 1.2vw;
+    font-size: calc(0.8rem + 1.5vw);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
 }
 .boost button{
     font-weight: lighter;
     margin-top: 2vw;
-    font-size: 1.2vw;
+    font-size: calc(0.8rem + 1.5vw);
+    padding: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-    height: 2.6vw;
-    width: 13vw;
     border: none;
     border-radius: 5px;
     font-weight: lighter;
     cursor: pointer;
     background-color: white;
+    margin-bottom: 1rem;
 }
 .boost img{
-    height: 1.2vw;
-    width: 1.2vw;
+    height: 2rem;
+    width: 2rem;
 }
-
+@media screen and (max-width: 740px){
+    .boost img{
+        height: 1rem;
+        width: 1rem;
+    }
+}
 .random-1{
     margin-top: 50px;
     text-align: center;
-    font-size: 3.5vw;
+    font-size: calc(1.2rem + 4vw);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: lighter;
     word-spacing: 1px;
@@ -85,7 +89,7 @@ a:hover{
 }
 .random-2{
     text-align: center;
-    font-size: 1.5vw;
+    font-size:calc(1.2rem + 1.5vw);
     font-weight: lighter;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 5px;
@@ -101,10 +105,6 @@ a:hover{
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px 15px; 
-    height: 100%;
-    width: 80%;
-    left: 10.5%;
-    position: relative;
     margin-bottom:100px;
   }
 
@@ -132,29 +132,37 @@ a:hover{
     border: 1px solid rgba(128, 128, 128, 0.474);
     width: 26%;
 }
+@media screen and (max-width: 740px){
+  .projet-1, .projet-2, .projet-3, .projet-4, .projet-5, .projet-6{
+    width: 40%;
+  }
+}
+@media screen and (max-width: 558px){
+    .projet-1, .projet-2, .projet-3, .projet-4, .projet-5, .projet-6{
+      width: 90%;
+    }
+  }
 
 .projects img{
-  width: 100%;
-  height: 15vw;
+    width: 100%;
 }
 .projects p{
     margin-top: 15px;
     width: 100%;
-    font-size: clamp(10px, 1vw, 25px);
+    font-size: calc(0.6rem + 1vw);
 
 }
 .projects h3{
     margin-top: 10px;
-    font-size: clamp(20px, 2vw, 25px);
+    font-size: calc(0.6rem + 1.5vw);
     width: 100%;
 }
 .projects button{
     margin-top: 15px;
-    height: 1.8vw;
-    width: 9vw;
     border: none;
     border-radius: 5px;
-    font-size: clamp(8px, 0.9vw, 25px);
+    font-size: calc(0.6rem + 0.8vw);
+    padding: 0.5rem;
     cursor: pointer;
     background-color: rgb(0, 156, 253);
 }
